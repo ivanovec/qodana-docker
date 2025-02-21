@@ -26,7 +26,7 @@ jobs:
             group: "ruby"
           - version: "2024.3"
             group: "ruby"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Clean up
         run: |
@@ -48,7 +48,7 @@ jobs:
       - name: Build and push
         uses: docker/bake-action@v5
         with:
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: false
           workdir: ${{ matrix.version }}/base
           targets: ${{ matrix.group }}
           set: |
