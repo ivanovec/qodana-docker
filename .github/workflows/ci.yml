@@ -24,6 +24,7 @@ jobs:
       - uses: dorny/paths-filter@v3
         id: changes
         with:
+          ref: ${{ github.head_ref }}
           filters: |
             dockerfiles:
               - '${{ matrix.release }}/**'
