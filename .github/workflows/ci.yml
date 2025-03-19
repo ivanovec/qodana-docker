@@ -1,12 +1,6 @@
 name: 'CI'
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - '**/Dockerfile'
-      - '**/Dockerfile.j2'
   pull_request:
     paths:
       - '**/Dockerfile'
