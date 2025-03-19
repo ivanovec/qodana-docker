@@ -37,7 +37,6 @@ jobs:
               git diff --ignore-space-at-eol HEAD -- ${{ matrix.release }}
               git config user.name Ivan.Efimov
               git config user.email ivanvec@gmail.com
-              git checkout 
               git add .
               git commit -m "QD-8148 Update \`${{ matrix.release }}\` Dockerfiles"
               git push
